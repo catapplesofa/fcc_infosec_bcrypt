@@ -10,12 +10,12 @@ const myPlaintextPassword = 'sUperpassw0rd!';
 const someOtherPlaintextPassword = 'pass123';
 
 
-  const hash = bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
+const hash = bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
     console.log(hash);
     bcrypt.compare(myPlaintextPassword, hash, (err, res) => {
-      console.log(res);
+        console.log(res);
     });
-  });
+});
 
 
 //END_ASYNC
