@@ -11,7 +11,6 @@ const someOtherPlaintextPassword = 'pass123';
 
 
 bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
-    console.log(hash);
     bcrypt.compare(myPlaintextPassword, hash, (err, res) => {
       console.log(res); 
     });
