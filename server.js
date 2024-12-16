@@ -2,7 +2,7 @@
 const express     = require('express');
 const bodyParser  = require('body-parser');
 const fccTesting  = require('./freeCodeCamp/fcctesting.js');
-const bcrypt     = require('bcrypt');
+const bcrypt      = require('bcrypt');
 const app         = express();
 fccTesting(app);
 const saltRounds = 12;
@@ -11,12 +11,12 @@ const someOtherPlaintextPassword = 'pass123';
 
 
 bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
-    //console.log(hash)
+    console.log(hash);
 
     bcrypt.compare(myPlaintextPassword, hash, (err, res) => {
-        //console.log(res)
-    })
-})
+        console.log(res);
+    });
+});
 
 
 //END_ASYNC
