@@ -10,6 +10,9 @@ const myPlaintextPassword = 'sUperpassw0rd!';
 const someOtherPlaintextPassword = 'pass123';
 
 
+app.get('/', (req, res) => {
+    res.send("hello world!");
+})
 
 const hash = bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
     console.log(hash);
