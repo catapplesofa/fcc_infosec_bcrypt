@@ -9,7 +9,7 @@ const saltRounds = 12;
 const myPlaintextPassword = 'sUperpassw0rd!';
 const someOtherPlaintextPassword = 'pass123';
 
-
+//START_ASYNC
 bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
     console.log(hash);
 
